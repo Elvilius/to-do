@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "npx babel-node server/server.js",
+    "start": "npx babel-node src/app.js",
     "start:dev": "nodemon"
   },
   "repository": {
@@ -19,18 +19,24 @@
   },
   "homepage": "https://github.com/Elvilius/chat-node.js#readme",
   "dependencies": {
-    "express": "^4.17.1",
     "@babel/cli": "^7.5.0",
     "@babel/core": "^7.5.4",
     "@babel/node": "^7.5.0",
     "@babel/preset-env": "^7.5.4",
     "babel-eslint": "^10.0.2",
+    "body-parser": "^1.19.0",
+    "cookie-parser": "^1.4.4",
     "dotenv": "^8.2.0",
     "eslint": "^6.0.1",
     "eslint-config-airbnb-base": "^13.2.0",
     "eslint-plugin-babel": "^5.3.0",
     "eslint-plugin-import": "^2.18.0",
+    "express": "^4.17.1",
+    "express-validator": "^6.2.0",
     "lodash": "^4.17.15",
-    "nodemon": "^1.19.4"
+    "nodemon": "^1.19.4",
+    "passport": "^0.4.0",
+    "passport-jwt": "^4.0.0",
+    "passport-local": "^1.0.0"
   }
 }

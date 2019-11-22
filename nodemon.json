@@ -2,5 +2,5 @@
   "watch": ["src"],
   "ext": "js",
   "ignore": ["src/**/*.spec.js"],
-  "exec": "nodemon --exec babel-node server/server.js"
+  "exec": "nodemon --exec babel-node src/app.js"
 }

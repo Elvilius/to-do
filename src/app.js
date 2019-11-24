@@ -4,6 +4,7 @@ import cookieParser from 'cookie-parser';
 import bodyParser from 'body-parser';
 import passport from 'passport';
 import toDoRoute from './to-do/routes/router';
+import userRoute from './user/routes/routes';
 
 dotenv.config();
 
@@ -16,5 +17,6 @@ app.use(passport.initialize());
 app.use(passport.session());
 
 app.use('/to-do', toDoRoute);
+app.use('/user', userRoute);
 
 app.listen(process.env.PORT);

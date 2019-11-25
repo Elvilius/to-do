@@ -1,6 +1,6 @@
 import express from 'express';
 // import validateUser from '../../middleware/validates';
-import    model from '../../database/models/index';
+import           model from '../../database/models/index';
 
 const router = express.Router();
 

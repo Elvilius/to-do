@@ -15,7 +15,7 @@
   },
   "lint-staged": {
     "*.js": [
-      "eslint --ignore-path .eslintignore .",
+      "npm run lint",
       "git add"
     ]
   },

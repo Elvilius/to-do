@@ -10,9 +10,10 @@ export const userValidate = [
       return res.status(422).json({ errors: errors.array() });
     }
     next();
-  }];
+  },
+];
 
-export const createToDoValidate = [
+export const           createToDoValidate = [
   body('description').isString(),
   body('name').isString(),
   body('startAt').isInt(),
@@ -24,4 +25,5 @@ export const createToDoValidate = [
       return res.status(422).json({ errors: errors.array() });
     }
     next();
-  }];
+  },
+];

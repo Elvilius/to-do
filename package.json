@@ -6,8 +6,14 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "npx babel-node src/app.js",
-    "start:dev": "nodemon"
+    "start:dev": "nodemon",
+    "lint": "eslint --ignore-path .eslintignore ."
   },
+
+  "gitHooks": {
+    "pre-commit": "lint"
+  },
+
   "repository": {
     "type": "git",
     "url": "git+https://github.com/Elvilius/chat-node.js.git"

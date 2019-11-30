@@ -13,7 +13,7 @@ export const userValidate = [
   },
 ];
 
-export const           createToDoValidate = [
+export const createToDoValidate = [
   body('description').isString(),
   body('name').isString(),
   body('startAt').isInt(),

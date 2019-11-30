@@ -2,6 +2,9 @@ import express from 'express';
 // import validateUser from '../../middleware/validates';
 import model from '../../database/models/index';
 
+
+
+
 const router = express.Router();
 
 router.get('/login', async (req, res) => {

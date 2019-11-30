@@ -10,10 +10,13 @@
     "lint": "eslint src/",
     "prettier": "prettier --write src/**/*.js"
   },
-  "gitHooks": {
-    "pre-commit": "lint-staged",
-    "pre-push": "vue-cli-service test:unit"
-  },
+  
+  "husky": {    
+    "hooks": {      
+     "pre-commit": "lint-staged"
+    }  
+ },
+ 
   "lint-staged": {
     "*.js": [
       "npm run lint",

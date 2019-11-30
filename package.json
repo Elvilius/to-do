@@ -11,13 +11,11 @@
     "prettier": "prettier --write src/**/*.js"
   },
   "gitHooks": {
-    "pre-commit": "lint-staged"
+    "pre-commit": "lint-staged",
+    "pre-push": "vue-cli-service test:unit"
   },
   "lint-staged": {
-    "*.js": [
-      "npm run lint",
-      "git add"
-    ]
+    "*.js": ["npm run lint","git add"]
   },
   "repository": {
     "type": "git",

@@ -12,10 +12,16 @@ export const createUser = async (req, res) => {
   const { email, password } = req.body;
   const user = await findUserByEmail(email);
   if (user) {
-    return res.send('fail');
+    return res.send('A user with that email address already exists.');
   }
   const passwordHash = await getPasswordHash(password);
   const newUser = await model.User.create({ email, password: passwordHash });
-  const jwtToken = await getJwt(newUser);
+  const jwtToken = getJwt(newUser);
+  return res.send({ jwtToken });
+};
+
+export const login = async (req, res) => {
+  const { user } = req;
+  const jwtToken = getJwt(user);
   return res.send({ jwtToken });
 };

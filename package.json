@@ -8,7 +8,9 @@
     "start": "npx babel-node src/app.js",
     "start:dev": "nodemon",
     "lint": "eslint src/",
-    "prettier": "prettier --write src/**/*.js"
+    "prettier": "prettier --write src/**/*.js",
+    "migrate": "npx sequelize db:migrate"
+
   },
   "husky": {
     "hooks": {

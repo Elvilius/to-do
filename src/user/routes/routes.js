@@ -1,17 +1,9 @@
 import express from 'express';
-// import validateUser from '../../middleware/validates';
-import model from '../../database/models/index';
+import { userValidate } from '../../middleware/validates';
+import { createUser } from '../handlers/user';
 
 const router = express.Router();
 
-router.get('/login', async (req, res) => {
-  const user = await model.User.findOne({ email: 'fnord', password: 'omnomnom', token: 'qweqweqweqwe' });
-  console.log(user);
-  res.send(user);
-});
-
-// router.post('/registration', validateUser, true);
-
-// router.post('/change-password', true);
+router.post('/registration', userValidate, createUser);
 
 export default router;

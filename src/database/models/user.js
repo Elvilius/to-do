@@ -4,6 +4,7 @@ export default (sequelize, DataTypes) => {
     email: DataTypes.STRING,
     token: DataTypes.STRING,
   }, {});
+
   User.associate = () => {
     // associations can be defined here
   };

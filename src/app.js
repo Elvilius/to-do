@@ -5,6 +5,7 @@ import bodyParser from 'body-parser';
 import passport from 'passport';
 import toDoRoute from './to-do/routes/router';
 import userRoute from './user/routes/routes';
+import errorHandler from './error/error';
 
 dotenv.config();
 
@@ -19,4 +20,5 @@ app.use(passport.session());
 app.use('/to-do', toDoRoute);
 app.use('/user', userRoute);
 
+app.use(errorHandler);
 app.listen(process.env.PORT);

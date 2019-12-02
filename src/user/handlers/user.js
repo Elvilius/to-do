@@ -6,6 +6,8 @@ const saltOrRounds = 10;
 
 export const findUserByEmail = email => model.User.findOne({ where: { email } });
 
+export const findUserById = id => model.User.findOne({ where: { id } });
+
 const getPasswordHash = password => bcrypt.hash(password, saltOrRounds);
 
 export const createUser = async (req, res) => {

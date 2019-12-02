@@ -2,7 +2,7 @@ import * as jwt from 'jsonwebtoken';
 
 require('dotenv').config();
 
-const secret = process.env.JWT_SECRET;
+export const secret = process.env.JWT_SECRET;
 
 export default (user) => {
   const payload = { email: user.email, password: user.password, id: user.id };

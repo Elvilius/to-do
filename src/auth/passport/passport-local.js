@@ -1,6 +1,6 @@
 import passport from 'passport';
 import { Strategy as LocalStrategy } from 'passport-local';
-import { findUserByEmail } from '../../../user/handlers/user';
+import { findUserByEmail } from '../../user/handlers/user';
 
 passport.serializeUser((user, done) => done(null, user));
 passport.deserializeUser((user, done) => done(null, user));

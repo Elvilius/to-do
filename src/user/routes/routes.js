@@ -1,7 +1,7 @@
 import express from 'express';
 import { userValidate } from '../../middleware/validates';
 import { createUser, login } from '../handlers/user';
-import passport from '../../auth/passport/local/passport';
+import passport from '../../auth/passport/passport-local';
 
 
 const router = express.Router();

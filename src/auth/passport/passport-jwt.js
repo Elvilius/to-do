@@ -12,8 +12,11 @@ passport.use(new JWTStrategy({
 
 }, async (jwtPayload, done) => {
   const user = await findUserById(jwtPayload.id);
+  console.log(jwtPayload);
   if (!user) {
-    return done(null, { message: 'false' });
+    return done(null, false);
   }
   return done(null, user);
 }));
+
+export default passport;

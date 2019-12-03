@@ -1,7 +1,7 @@
 import passportJWT from 'passport-jwt';
 import passport from 'passport';
-import { findUserById } from '../../user/handlers/user';
-import { secret } from '../../user/token/jwt';
+import { findUserById } from '../../user/service';
+import { secret } from '../../token/service';
 
 const JWTStrategy = passportJWT.Strategy;
 const ExtractJWT = passportJWT.ExtractJwt;
@@ -12,7 +12,6 @@ passport.use(new JWTStrategy({
 
 }, async (jwtPayload, done) => {
   const user = await findUserById(jwtPayload.id);
-  console.log(jwtPayload);
   if (!user) {
     return done(null, false);
   }

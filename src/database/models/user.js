@@ -6,8 +6,13 @@ export default (sequelize, DataTypes) => {
     email: [DataTypes.STRING, DataTypes.email],
   }, {});
 
-  User.associate = () => {
+  User.associate = (models) => {
     // associations can be defined here
+    User.hasMany(models.Task, {
+      foreignKey: 'userId',
+      as: 'tasks',
+      onDelete: 'CASCADE',
+    });
   };
   // eslint-disable-next-line func-names
   User.prototype.validatePassword = async function (password) {

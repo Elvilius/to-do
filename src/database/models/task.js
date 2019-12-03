@@ -6,7 +6,6 @@ export default (sequelize, DataTypes) => {
     userId: DataTypes.INTEGER,
   }, {});
   Task.associate = (models) => {
-    // associations can be defined here
     Task.belongsTo(models.User, {
       foreignKey: 'userId',
       as: 'author',

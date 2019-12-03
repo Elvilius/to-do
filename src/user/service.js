@@ -9,6 +9,15 @@ export const findUserById = id => model.User.findOne({ where: { id } });
 
 const getPasswordHash = password => bcrypt.hash(password, saltOrRounds);
 
+export const change = async (user, oldPassword, newPassword) => {
+  if (!await user.validatePassword(oldPassword)) {
+    throw new Error('Password entered incorrectly');
+  }
+  const passwordHash = await getPasswordHash(newPassword);
+  const updateUser = await user.update({ password: passwordHash });
+  return updateUser;
+};
+
 export const create = async (email, password) => {
   const user = await findUserByEmail(email);
   if (user) {

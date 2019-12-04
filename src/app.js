@@ -19,6 +19,7 @@ app.use(passport.session());
 
 app.use('/to-do', toDoRoute);
 app.use('/user', userRoute);
+app.get('/', (req, res) => res.send('Hello World!'));
 
 app.use(errorHandler);
 app.listen(process.env.PORT);

@@ -4,11 +4,11 @@
 
 Awesome factory line manager!
 
-[build-badge]: https://img.shields.io/travis/<Ваше имя на гите>/<Имя вашего проекта>/master.png?style=flat-square
-[build]: https://travis-ci.org/<Ваше имя на гите>/<Имя вашего проекта>
+[build-badge]: https://img.shields.io/travis/<Elvilius>/<to-do>/master.png?style=flat-square
+[build]: https://travis-ci.org/<to-do>/<Имя вашего проекта>
 
-[coveralls-badge]: https://img.shields.io/coveralls/<Ваше имя на гите>/<Имя вашего проекта>/master.png?style=flat-square
-[coveralls]: https://coveralls.io/github/<Ваше имя на гитхабе>/<Имя вашего проекта>
+[coveralls-badge]: https://img.shields.io/coveralls/<Elvilius>/<to-do>/master.png?style=flat-square
+[coveralls]: https://coveralls.io/github/<Elvilius>/<to-do>
 
 ## Installation
 Copy `.env.sample` with name `.env` and set variables in it.

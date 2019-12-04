@@ -14,6 +14,3 @@ deploy:
   api_key:
     secure: "7aabf0d4-899b-4194-827e-38a76c91f789"
 
-after_success:
-  - cat ./coverage/lcov.info | ./node_modules/codecov.io/bin/codecov.io.js
-  - cat ./coverage/lcov.info | ./node_modules/coveralls/bin/coveralls.js

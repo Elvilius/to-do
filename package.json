@@ -9,7 +9,8 @@
     "start:dev": "nodemon",
     "lint": "eslint src/",
     "prettier": "prettier --write src/**/*.js",
-    "migrate": "npx sequelize db:migrate"
+    "migrate": "npx sequelize db:migrate",
+    "heroku-postbuild": "npm install --only=dev --no-shrinkwrap && npm run build"
   },
   "husky": {
     "hooks": {

@@ -17,7 +17,10 @@ export const create = async (name, description, userId) => {
 };
 
 export const getList = async (userId, condition) => {
-  const task = await model.Task.findAll({ where: { userId, isCompleted: false, condition } });
+  const { filter, order, isCompleted = false } = condition;
+  const task = await model.Task.findAll(
+    { where: { userId, ...filter, isCompleted }, order: Object.entries(order) },
+  );
   return task;
 };
 
@@ -28,6 +31,5 @@ export const complete = async (userId, taskId) => {
 
 export const change = async (name, description, taskId, userId) => {
   const task = await getTask(userId, taskId);
-  console.log(task);
   return task.update({ name, description });
 };

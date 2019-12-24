@@ -17,7 +17,7 @@ export const create = async (name, description, userId) => {
 };
 
 export const getList = async (userId, condition) => {
-  const { filter, order, isCompleted = false } = condition;
+  const { filter = {}, order = {}, isCompleted = false } = condition;
   const task = await model.Task.findAll(
     { where: { userId, ...filter, isCompleted }, order: Object.entries(order) },
   );

@@ -52,7 +52,7 @@
     "express-validator": "^6.2.0",
     "http-errors": "^1.7.3",
     "husky": "^3.1.0",
-    "jsonwebtoken": "^8.5.1",
+    "jsonwebtoken": "^9.0.0",
     "lint-staged": "^9.4.3",
     "lodash": "^4.17.15",
     "nodemon": "^1.19.4",
